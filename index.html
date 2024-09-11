@@ -2,94 +2,159 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Vide</title>
-    <!-- Lien vers le fichier CSS -->
+    <title>Git Commands README</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="les-commandes">
-        <div class='une-commande'>
-            <p>git checkout (nom_branche)</p>
-            <p>permet de changer de branche actuel</p>
-        </div>
-        
-        <div class='une-commande'>
-            <p>git config --global user.name "nom" </p>
-            <p >git config --global user.email "adresse"</p>
-            <p>permet de configurer le nom et l'adresse mail de l'utilisateur</p>
-        </div>
 
-        <div class='une-commande'>
-            <p>git remote add origin (adresse)</p>
-            <p>permet d'associer le dépot local avec le dépot distant</p>
-        </div>
+    <h1>Git Commands</h1>
 
-        <div class='une-commande'>
-            <p>git rebase -i HEAD~N </p>
-            <p>permet de modifier les N derniers commits</p>
-        </div>
+    <br>
+    <br>
 
-        <h1> les commits </h1>
+    
 
-
-        <div class='type-commit'>
-            <p>feat : commit qui ajoute une nouvelle fonctionnalité </p>
-            <p>fix : commit qui corrige un bug</p>
-            <p>docs : commit qui ajoute ou modifie de la documentation</p>
-            <p>style : commit qui n'impacte pas le code (espace, indentation, point-virgule manquant, etc)</p>
-            <p>refactor : commit qui ne corrige pas de bug ni n'ajoute de fonctionnalité</p>
-            <p>perf : commit qui améliore les performances</p>
-            <p>test : commit qui ajoute ou modifie des tests</p>
-
-            
-        </div>
-
-        <h1> les brances </h1>
-
-        <div class='type-branch'>
-            <p>master : branche principale</p>
-            <p>develop : branche de développement</p>
-            <p>feature : branche de fonctionnalité</p>
-            <p>bugfix : branche de correction de bug</p>
-            <p>hotfix : branche de correction de bug mais dans l'urgence</p>
-            <p>test : branche pour essayer des choses</p>
-        </div>
-
-        <div class='une-commande'>
-            <p>git branch -D nom_branche </p>
-            <p>permet de supprimer une branche local</p>
-        </div>
-
-        <div class='une-commande'>
-            <p>git push --delete origin nom_branche </p>
-            <p>permet de supprimer une branche distant</p>
-        </div>
-
-        <div class='une-commande'>
-            <p>git merge nom_branche_a_integrer </p>
-            <p>permet de fussioner deux branches</p>
-        </div>
-
-        <div class='une-commande'>
-            <p>git branch -D feature/chat </p>
-            <p>permet de supprimer une branche</p>
-        </div>
-
-        
-
-
-
-        
-
-
-
-
-
-
-
-            
+    <div class="command-container">
+        <h2>Config le nom et l'adresse mail</h2>
+        <pre>
+            <code>git config --global user.name "nom" </code>
+            <button class="copy-btn" onclick="copyCommand('git config --global user.name ', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+            <code>git config --global user.email "adresse"</code>
+            <button class="copy-btn" onclick="copyCommand('git config --global user.email ', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
     </div>
+
+    <div class="command-container">
+        <h2>Associer le dépot local avec le dépot distant</h2>
+        <pre>
+            <code>git remote add origin (adresse)</code>
+            <button class="copy-btn" onclick="copyCommand('git remote add origin (adresse)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+    </div>
+
+    <div class="command-container">
+        <h2>Modifier les N derniers commits</h2>
+        <pre>
+            <code>git rebase -i HEAD~N</code>
+            <button class="copy-btn" onclick="copyCommand('git rebase -i HEAD~N', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+
+    <h1> les commits </h1>
+    <pre class ='texte'>
+        <div class='type-branch'>
+        <p><strong>feat</strong> : commit qui ajoute une nouvelle fonctionnalité </p>
+        <p><strong>fix</strong> : commit qui corrige un bug</p>
+        <p><strong>docs</strong> : commit qui ajoute ou modifie de la documentation</p>
+        <p><strong>style</strong> : commit qui n'impacte pas le code (espace, indentation, point-virgule manquant, etc)</p>
+        <p><strong>refactor</strong> : commit qui ne corrige pas de bug ni n'ajoute de fonctionnalité</p>
+        <p><strong>perf</strong> : commit qui améliore les performances</p>
+        <p><strong>test</strong> : commit qui ajoute ou modifie des tests</p>
+    </div>
+    </pre>
+    
+
+    
+
+
+    <br>
+
+    
+    
+
+    <h1> les branches </h1>
+    
+
+    <pre class ='texte'>
+        <div class='type-branch'>
+            <p><strong>master</strong> : branche principale</p>
+            <p><strong>develop</strong> : branche de développement</p>
+            <p><strong>feature</strong> : branche de fonctionnalité</p>
+            <p><strong>bugfix</strong> : branche de correction de bug</p>
+            <p><strong>hotfix</strong> : branche de correction de bug mais dans l'urgence</p>
+            <p><strong>test</strong> : branche pour essayer des choses</p>
+          
+        </div>
+    </pre>
+
+
+
+    <div class="command-container">
+        <h2>Créer une nouvelle branche</h2>
+        <pre>
+            <code>git checkout -b (nom_branche)</code>
+            <button class="copy-btn" onclick="copyCommand('git checkout -b (nom_branche)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+
+    <div class="command-container">
+        <h2>Changer de branche</h2>
+        <pre>
+            <code>git checkout (nom_branche)</code>
+            <button class="copy-btn" onclick="copyCommand('git checkout (nom_branche)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+    </div>
+
+    <div class="command-container">
+        <h2>Supprimer une branche local</h2>
+        <pre>
+            <code>git branch -D (nom_branche)</code>
+            <button class="copy-btn" onclick="copyCommand('git branch -D (nom_branche)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+
+    </div>
+
+    <div class="command-container">
+        <h2>Supprimer une branche distante</h2>
+        <pre>
+            <code>git push --delete origin (nom_branche)</code>
+            <button class="copy-btn" onclick="copyCommand('git push  --delete origin (nom_branche)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+    </div>
+
+    <div class="command-container">
+        <h2>Merger une branche</h2>
+        <pre>
+            <code>git merge (nom_branche)</code>
+            <button class="copy-btn" onclick="copyCommand('git merge (nom_branche)', this)">Copier</button>
+            <span class="tooltip">Copié !</span>
+        </pre>
+    </div>
+    
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+
+    
 </body>
 </html>
